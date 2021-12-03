@@ -1,0 +1,18 @@
+C:\Users\3prok\Desktop\TestTaskModel\TestTask\bin\Debug\TestTask.dll
+C:\Users\3prok\Desktop\TestTaskModel\TestTask\bin\Debug\TestTask.pdb
+C:\Users\3prok\Desktop\TestTaskModel\TestTask\obj\Debug\DepositLib.csproj.CoreCompileInputs.cache
+C:\Users\3prok\Desktop\TestTaskModel\TestTask\obj\Debug\TestTask.dll
+C:\Users\3prok\Desktop\TestTaskModel\TestTask\obj\Debug\TestTask.pdb
+C:\Users\3prok\Desktop\TestTaskModel\TestTask\obj\Debug\DepositLib.csproj.AssemblyReference.cache
+C:\Users\theen\Desktop\Введение в запросы LINQ (C#) 4\TestTaskModel\TestTask\bin\Debug\TestTask.dll
+C:\Users\theen\Desktop\Введение в запросы LINQ (C#) 4\TestTaskModel\TestTask\bin\Debug\TestTask.pdb
+C:\Users\theen\Desktop\Введение в запросы LINQ (C#) 4\TestTaskModel\TestTask\obj\Debug\DepositLib.csprojAssemblyReference.cache
+C:\Users\theen\Desktop\Введение в запросы LINQ (C#) 4\TestTaskModel\TestTask\obj\Debug\DepositLib.csproj.CoreCompileInputs.cache
+C:\Users\theen\Desktop\Введение в запросы LINQ (C#) 4\TestTaskModel\TestTask\obj\Debug\TestTask.dll
+C:\Users\theen\Desktop\Введение в запросы LINQ (C#) 4\TestTaskModel\TestTask\obj\Debug\TestTask.pdb
+C:\Users\Ent\Desktop\TestTaskModel\TestTask\bin\Debug\TestTask.dll
+C:\Users\Ent\Desktop\TestTaskModel\TestTask\bin\Debug\TestTask.pdb
+C:\Users\Ent\Desktop\TestTaskModel\TestTask\obj\Debug\DepositLib.csproj.AssemblyReference.cache
+C:\Users\Ent\Desktop\TestTaskModel\TestTask\obj\Debug\DepositLib.csproj.CoreCompileInputs.cache
+C:\Users\Ent\Desktop\TestTaskModel\TestTask\obj\Debug\TestTask.dll
+C:\Users\Ent\Desktop\TestTaskModel\TestTask\obj\Debug\TestTask.pdb

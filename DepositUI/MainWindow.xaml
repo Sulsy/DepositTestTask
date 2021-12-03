@@ -1,0 +1,63 @@
+﻿<Window x:Class="DepositUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DepositUI"
+        mc:Ignorable="d"
+        Title="Deposit Calculator" Height="633.841" Width="570.884" ResizeMode="CanMinimize">
+    <Grid>
+        <Border BorderThickness="1" CornerRadius="9" HorizontalAlignment="Left"  Height="55" Margin="0,10,0,0" VerticalAlignment="Top" Width="555" Background="#FFEA3F3F">
+            <TextBlock Text="Advanced Deposit Calculator" TextAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="DemiBold" Foreground="WhiteSmoke" Margin="0,12,-1,9"/>
+        </Border>
+
+        <TextBlock Text="Find a Summary Future Deposit Payments" TextAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="DemiBold" Margin="0,87,0,491"/>
+
+        <WrapPanel Margin="10,155,10,414">
+            <TextBlock Text="First payments date :" TextAlignment="Left" FontSize="16" FontWeight="DemiBold"/>
+            <DatePicker x:Name="FirstDate" Margin="20,0,0,0" FontSize="14" FontWeight="DemiBold" Width="200"/>
+        </WrapPanel>
+        <WrapPanel Margin="10,191,10,374" >
+            <TextBlock Text="Latest payments date :" TextAlignment="Left"  FontSize="16" FontWeight="DemiBold"/>
+            <DatePicker x:Name="LatestDate" Margin="8,0,0,0" FontSize="14" FontWeight="DemiBold" Width="200"/>
+        </WrapPanel>
+        <WrapPanel Margin="10,236,-10,338" >
+            <TextBlock Text="Deposit Sum :" TextAlignment="Left"  FontSize="16" FontWeight="DemiBold" Width="150"/>
+            <TextBox x:Name="DepositSum" Margin="20,0,0,0" FontSize="14" FontWeight="DemiBold" Width="200" TextChanged="textBoxNumeric_TextChanged"/>
+            <TextBlock Text=" $" TextAlignment="Left" FontSize="16" FontWeight="DemiBold"/>
+        </WrapPanel>
+        <WrapPanel Margin="10,272,-10,302" >
+            <TextBlock Text="Deposit Percentage :" TextAlignment="Left"  FontSize="16" FontWeight="DemiBold" Width="150"/>
+            <TextBox x:Name="PercentSum" Margin="20,0,0,0" FontSize="14" FontWeight="DemiBold" Width="200" TextChanged="textBoxNumeric_TextChanged"/>
+        </WrapPanel>
+        <WrapPanel Margin="10,353,10,189" >
+            <CheckBox x:Name="ReplenishmentDepositCheckBox" Content="Is Repayment Deposit" FontSize="16" FontWeight="DemiBold" Width="193" Height="28"/>
+            <WrapPanel x:Name="ReplenishmentDeposit" Visibility="{Binding ElementName=ReplenishmentDepositCheckBox, Path=IsChecked, TargetNullValue=false, Converter={local:BooleanToVisibilityConverter}}" Height="32" Width="545">
+                <TextBlock Text="Repayment Deposit Sum :" TextAlignment="Left"  FontSize="16" FontWeight="DemiBold" Width="193"/>
+                <TextBox x:Name="ReplenishmentDepositTextBox" Margin="20,0,0,0" FontSize="14" FontWeight="DemiBold" Width="156" TextChanged="textBoxNumeric_TextChanged"/>
+                <TextBlock Text=" $" TextAlignment="Left" FontSize="16" FontWeight="DemiBold"/>
+            </WrapPanel>
+        </WrapPanel>
+        <WrapPanel Margin="10,308,10,257" >
+            <TextBlock Text="Compounding :" TextAlignment="Left"  FontSize="16" FontWeight="DemiBold" Width="170"/>
+            <ComboBox Name="TypeCapital" VerticalAlignment="Top" Width="199" >
+                <ComboBoxItem IsSelected="True">Monthly</ComboBoxItem>
+                <ComboBoxItem >Quarterly</ComboBoxItem>
+                <ComboBoxItem >Daily</ComboBoxItem>
+            </ComboBox>
+        </WrapPanel>
+        <Button Content="Calculating" Margin="221,416,220,0" VerticalAlignment="Top" Height="22" Click="Button_Click"/>
+        <WrapPanel Margin="10,459,-10,115" >
+            <TextBlock Text="Summary Future Deposit Percents :" TextAlignment="Left"  FontSize="16" FontWeight="DemiBold" Width="280"/>
+            <TextBox IsReadOnly="True" x:Name="Ansver" Margin="20,0,0,0" FontSize="14" FontWeight="DemiBold" Width="202" TextChanged="textBoxNumeric_TextChanged"/>
+        </WrapPanel>
+        <WrapPanel Margin="10,495,-10,79" >
+            <TextBlock Text="Summary Deposit Days :" TextAlignment="Left"  FontSize="16" FontWeight="DemiBold" Width="280"/>
+            <TextBox IsReadOnly="True" x:Name="Ansver1" Margin="20,0,0,0" FontSize="14" FontWeight="DemiBold" Width="202" TextChanged="textBoxNumeric_TextChanged"/>
+        </WrapPanel>
+        <WrapPanel Margin="10,531,-10,43" Visibility="{Binding ElementName=ReplenishmentDepositCheckBox, Path=IsChecked, TargetNullValue=false, Converter={local:BooleanToVisibilityConverter}}">
+            <TextBlock Text="Summary Deposit:" TextAlignment="Left"  FontSize="16" FontWeight="DemiBold" Width="280"/>
+            <TextBox IsReadOnly="True" x:Name="Ansver2"  Margin="20,0,0,0" FontSize="14" FontWeight="DemiBold" Width="202" TextChanged="textBoxNumeric_TextChanged"/>
+        </WrapPanel>
+    </Grid>
+</Window>
